@@ -2,6 +2,11 @@
 
 if [ $(which apt < /dev/null) ] || [ $(which dpkg < /dev/null) ]; then
   clear
+
+  sudo apt --fix-broken install
+
+  clear
+  
   echo "Starting system update..."
 
   if [ "$EUID" -ne 0 ]; then
