@@ -20,12 +20,16 @@ if [ $(which apt < /dev/null) ] || [ $(which dpkg < /dev/null) ]; then
 
   clear
 
+  [ -x "$(command -v flatpak)" ] && flatpak update -y;
+
+  clear
+
   echo "Performing system cleanup..."
   sudo apt autoclean -y
   sudo apt autoremove -y
   sudo apt autopurge -y
 
-  echo "The system has been successfully updated and cleaned."
+  echo -e "\nThe system has been successfully updated and cleaned."
 else
-  echo "This system doesn't use apt or dpkg. The script cannot be executed here."
+  echo -e "\nThis system doesn't use apt or dpkg. The script cannot be executed here."
 fi

@@ -2,7 +2,7 @@
 
 Este script Bash foi criado para automatizar o processo de atualização e limpeza de sistemas baseados em Debian, Ubuntu e distros baseadas nos mesmos. Ele realiza as seguintes etapas:
 
-1. Atualiza os repositórios do sistema.
+1. Atualiza os repositórios do sistema(incluindo flatpaks).
 2. Realiza uma atualização completa do sistema.
 3. Executa a limpeza do sistema, incluindo a remoção de pacotes não utilizados e pastas vazias no sistema.
 
